@@ -9,7 +9,7 @@
 <body>
     <h1>Form Tambah Data User</h1>
     <form metotd="post" action="/user/tambah_simpan">
-        {{@csrf_field()}}
+        {{csrf_field()}}
 
         <label>"Username"</label>
         <input type="text" name="username" placeholder= "masukkan username">
@@ -17,13 +17,12 @@
         <label>"Nama"</label>
         <input type="text" name="nama" placeholder= "masukkan nama">
         <br>
-        <label>"Username"</label>
-        <input type="password" name="pasword" placeholder= "masukkan password">
+        <label>"password"</label>
+        <input type="password" name="password" placeholder= "masukkan password">
         <br>
-        <label>"Username"</label>
+        <label>"Level ID"</label>
         <input type="number" name="level_id" placeholder= "masukkan ID level">
         <br><br>
-        <label>"Username"</label>
         <input type="submit" class="btn btn-success" value= "simpan">
 
     </form>
