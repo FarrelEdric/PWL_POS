@@ -39,6 +39,16 @@ class kategoriSeeder extends Seeder
                 'kategori_kode' => 'String',
                 'kategori_nama' => 'celana',
             ],
+            [
+                'kategori_id' => 6,
+                'kategori_kode' => 'CML',
+                'kategori_nama' => 'cemilan',
+            ],
+            [
+                'kategori_id' => 7,
+                'kategori_kode' => 'MNR',
+                'kategori_nama' => 'Minuman Ringan',
+            ],
         ];
         DB::table('m_kategori')->insert($data);
     }
