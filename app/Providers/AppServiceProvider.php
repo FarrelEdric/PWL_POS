@@ -13,9 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton(Builder::class, function ($app) {
-            return $app->make(Builder::class);
-        });
+        //
     }
 
     /**
