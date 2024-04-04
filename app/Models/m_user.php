@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class m_user extends Model
 {
-    use HasFactory;
-
     protected $table = "m_user";
     public $timestamps = false;
 
