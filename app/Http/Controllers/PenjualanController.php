@@ -112,6 +112,7 @@ class PenjualanController extends Controller
             'title' => 'Detail Penjualan'
         ];
 
+        
         $activeMenu = 'penjualan';
         return view('penjualan.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'penjualan' => $penjualan, 'activeMenu' => $activeMenu]);
     }
