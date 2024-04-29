@@ -59,7 +59,7 @@ Route::group(['prefix' => 'user'], function () {
    Route::put('/{id}', [UserController::class, 'update']);
 
 
-   Route::delete('/{id}', [UserController::class, 'destroy'])->name('destroy');
+   Route::delete('/{id}', [UserController::class, 'destroy'])->name('destroy');               // menghapus data user
 });
 
 

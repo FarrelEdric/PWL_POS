@@ -30,7 +30,7 @@ class PenjualanController extends Controller
 
     public function list(Request $request)
     {
-        $penjualans = PenjualanModel::select('penjualan_id', 'user_id', 'pembeli', 'penjualan_kode', 'penjualan_tanggal')
+        $penjualans = PenjualanModel::select('penjualan_id', 'user_id', 'pembeli', 'penjualan_kode', 'penjual_tanggal')
             ->with('user');
 
         // Filter data stok bedasarkan level_id
@@ -148,7 +148,7 @@ class PenjualanController extends Controller
         PenjualanModel::find($id)->update([
             'penjualan_kode'        => $request->penjualan_kode,
             'user_id'               => $request->user_id,
-            'penjualan_tanggal'     => $request->penjualan_tanggal,
+            'penjual_tanggal'       => $request->penjualan_tanggal,
             'pembeli'               => $request->pembeli,
         ]);
 

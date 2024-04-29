@@ -67,7 +67,7 @@ class UserController extends Controller
                 // menambahkan kolom aksi
                 $btn =  $btn  = '<a href="' . url('user/' . $user->user_id) . '" class="btn btn-info btn-sm">Detail</a> ';
                 $btn .= '<a href="' . url('user/' . $user->user_id . '/edit') . '" class="btn btn-warning btn-sm">Edit</a> ';
-                $btn .= '<form action="' . url('/' . $user->user_id) . '" method="post">' . csrf_field() . method_field('DELETE') . '
+                $btn .= '<form action="' . url('user/' . $user->user_id) . '" method="post">' . csrf_field() . method_field('DELETE') . '
                 <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                 </form>';
 
@@ -162,11 +162,9 @@ class UserController extends Controller
         }
         try {
             UserModel::destroy($id);
-
-            return redirect('/user') - with('success', 'Data user berhasil dihapus');
+            return redirect('/user')->with('success', 'Data user berhasil dihapus');
         } catch (\Illuminate\Database\QueryException $e) {
-
-            return redirect('/user')->with('error', 'Data user gagal di hapus karena masiih terdapat tabel lain yang terkait dengan data ini');
+            return redirect('/user')->with('error', 'Data user gagal dihapus karena masih terdapat tabel lain yang terkait dengan data ini');
         }
     }
 }
