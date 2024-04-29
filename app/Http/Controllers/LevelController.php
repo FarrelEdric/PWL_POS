@@ -168,5 +168,7 @@ class LevelController extends Controller
             // Jika terjadi error ketika menghapus data , redirect kemabli ke halaman dengan membawa pesan error
             return redirect('/level')->with('errror', 'Data level gagal dihapus karena masih terdapat tabel lain yang terkait dengan data ini');
         }
+
+        
     }
 };
