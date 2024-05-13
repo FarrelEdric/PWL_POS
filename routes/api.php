@@ -20,6 +20,7 @@ use App\Http\Controllers\Api\BarangController;
 |
 */
 
+
 Route::get('barangs', [BarangController::class, 'index']);
 Route::post('barangs', [BarangController::class, 'store']);
 Route::get('barangs/{barang}', [BarangController::class, 'show']);
@@ -50,3 +51,5 @@ Route::post('/login', App\Http\Controllers\Api\LoginController::class)->name('lo
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+// pertemuan11
+Route::post('/register1', App\Http\Controllers\Api\RegisterController::class)->name('register1');
